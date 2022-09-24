@@ -39,7 +39,7 @@
                                 </g>
                             </g>
                         </svg></span>
-                    <h2 class="brand-text">Vuexy</h2>
+                    <h2 class="brand-text">Kantor</h2>
                 </a></li>
             <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pe-0" data-bs-toggle="collapse"><i
                         class="d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i><i
@@ -65,7 +65,7 @@
                         class="menu-title text-truncate">Barang Masuk</span></a>
                 <ul class="menu-content">
                     <li>
-                        <a class="d-flex align-items-center" href="{{ route('admin.aset.bergerak') }}"><i
+                        <a class="d-flex align-items-center" href="{{ route('admin.masuk.aset.bergerak') }}"><i
                                 data-feather="circle"></i><span class="menu-item text-truncate">Aset Bergerak</span></a>
                     </li>
                     <li>
@@ -81,7 +81,7 @@
                         class="menu-title text-truncate">Barang Keluar</span></a>
                 <ul class="menu-content">
                     <li>
-                        <a class="d-flex align-items-center" href="layout-collapsed-menu.html"><i
+                        <a class="d-flex align-items-center" href="{{ route('admin.keluar.aset.bergerak') }}"><i
                                 data-feather="circle"></i><span class="menu-item text-truncate">Aset
                                 Bergerak</span></a>
                     </li>

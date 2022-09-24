@@ -29,4 +29,14 @@ const formData = (data) => {
         document.getElementById("id_form").value = data.id;
         document.getElementById("nama").value = data.nama;
     }
+    if (route == "aset_bergerak") {
+        document.getElementById("id_form").value = data.id;
+        document.getElementById("nama").value = data.nama;
+        document.getElementById("jenis_id").value = data.jenis_id;
+        document.getElementById("nama").value = data.nama;
+        document.getElementById("type").value = data.type;
+        document.getElementById("merk").value = data.merk;
+        document.getElementById("jmlh").value = data.jmlh;
+        document.getElementById("ket").value = data.ket;
+    }
 };

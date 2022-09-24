@@ -76,7 +76,10 @@ class RuanganController extends Controller
     public function store(Request $request)
     {
         $data_req = $request->all();
-        $this->spartaValidation($data_req);
+        $validate = $this->spartaValidation($data_req);
+        if ($validate) {
+            return $validate;
+        }
         Ruangan::create($data_req);
         $pesan = [
             'judul' => 'Berhasil',
