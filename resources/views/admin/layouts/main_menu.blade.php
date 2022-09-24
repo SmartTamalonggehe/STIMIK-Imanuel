@@ -69,7 +69,7 @@
                                 data-feather="circle"></i><span class="menu-item text-truncate">Aset Bergerak</span></a>
                     </li>
                     <li>
-                        <a class="d-flex align-items-center" href="layout-collapsed-menu.html"><i
+                        <a class="d-flex align-items-center" href="{{ route('admin.masuk.aset.diam') }}"><i
                                 data-feather="circle"></i><span class="menu-item text-truncate">Aset Tidak
                                 Bergerak</span></a>
                     </li>
@@ -86,7 +86,7 @@
                                 Bergerak</span></a>
                     </li>
                     <li>
-                        <a class="d-flex align-items-center" href="layout-collapsed-menu.html"><i
+                        <a class="d-flex align-items-center" href="{{ route('admin.keluar.aset.diam') }}"><i
                                 data-feather="circle"></i><span class="menu-item text-truncate">Aset Tidak
                                 Bergerak</span></a>
                     </li>

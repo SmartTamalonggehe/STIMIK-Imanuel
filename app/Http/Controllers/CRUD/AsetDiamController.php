@@ -2,19 +2,59 @@
 
 namespace App\Http\Controllers\CRUD;
 
-use App\Http\Controllers\Controller;
+use App\Models\AsetDiam;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Facades\Validator;
 
 class AsetDiamController extends Controller
 {
+    // validation
+    protected function spartaValidation($request, $id = "")
+    {
+        $required = "";
+        if ($id == "") {
+            $required = "required";
+        }
+        $rules = [
+            'nama' => 'required',
+        ];
+
+        $messages = [
+            'nama.required' => 'Nama ruangan harus diisi.',
+        ];
+        $validator = Validator::make($request, $rules, $messages);
+
+        if ($validator->fails()) {
+            $pesan = [
+                'judul' => 'Gagal',
+                'type' => 'error',
+                'pesan' => $validator->errors()->all(),
+            ];
+            return response()->json($pesan);
+        }
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $data = AsetDiam::with('ruangan')->where('jenis_id', $request->jenis)->get();
+        return DataTables::of($data)
+            ->addIndexColumn()
+            ->addColumn(
+                'action',
+                function ($data) {
+                    return '
+                    <button type="button" class="btn-ubah btn btn-outline-warning btn-sm" data-id="' . $data->id . '">Ubah</button>
+                    <button type="button" class="btn-hapus btn btn-outline-danger btn-sm" data-id="' . $data->id . '">Delete</button>';
+                }
+            )
+            ->rawColumns(['action'])
+            ->make(true);
     }
 
     /**
@@ -35,7 +75,18 @@ class AsetDiamController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data_req = $request->all();
+        $validate = $this->spartaValidation($data_req);
+        if ($validate) {
+            return $validate;
+        }
+        AsetDiam::create($data_req);
+        $pesan = [
+            'judul' => 'Berhasil',
+            'type' => 'success',
+            'pesan' => 'Data berhasil ditambahkan.',
+        ];
+        return response()->json($pesan);
     }
 
     /**
@@ -57,7 +108,8 @@ class AsetDiamController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = AsetDiam::findOrFail($id);
+        return response()->json($data);
     }
 
     /**
@@ -69,7 +121,22 @@ class AsetDiamController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data_req = $request->all();
+        // return $data_req;
+        $validate = $this->spartaValidation($data_req, $id);
+        if ($validate) {
+            return $validate;
+        }
+        // find data by id
+        $find_data = AsetDiam::find($id);
+
+        $find_data->update($data_req);
+        $pesan = [
+            'judul' => 'Berhasil',
+            'type' => 'success',
+            'pesan' => 'Data berhasil diperbaharui.',
+        ];
+        return response()->json($pesan);
     }
 
     /**
@@ -80,6 +147,14 @@ class AsetDiamController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = AsetDiam::findOrFail($id);
+        // delete data
+        $data->delete();
+        $pesan = [
+            'judul' => 'Berhasil',
+            'type' => 'success',
+            'pesan' => 'Data berhasil dihapus.',
+        ];
+        return response()->json($pesan);
     }
 }

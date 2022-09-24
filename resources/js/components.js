@@ -7,7 +7,7 @@ import "./components/toogle-password";
 import "./components/select/select2";
 
 // card
-import "./components/card/tenant";
+// import "./components/card/tenant";
 
 // datepicker
 import "./components/select/datapicker";

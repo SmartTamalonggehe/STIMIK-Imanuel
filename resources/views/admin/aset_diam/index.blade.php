@@ -26,9 +26,10 @@ $folder = 'aset_diam';
                             <tr>
                                 <th>No</th>
                                 <th>Nama</th>
-                                <th>Tipe</th>
+                                <th>Ruangan</th>
                                 <th>Merk</th>
                                 <th>Jumlah</th>
+                                <th>Satuan</th>
                                 <th>Keterangan</th>
                                 <th>Aksi</th>
                             </tr>
@@ -66,13 +67,16 @@ $folder = 'aset_diam';
                         data: 'nama',
                     },
                     {
-                        data: 'type',
+                        data: 'ruangan.nama',
                     },
                     {
                         data: 'merk',
                     },
                     {
                         data: 'jmlh',
+                    },
+                    {
+                        data: 'satuan',
                     },
                     {
                         data: 'ket',

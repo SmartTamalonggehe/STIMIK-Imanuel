@@ -1,5 +1,5 @@
 import ApexCharts from "apexcharts";
-import { getDataSchedule } from "../../getData";
+// import { getDataSchedule } from "../../getData";
 
 import moment from "../../moment";
 

@@ -1,16 +1,19 @@
-import "./district-select";
-import "./sub-district";
-import "./congregation";
+import "./ruangan";
+// import "./sub-district";
+// import "./congregation";
 
-import { Select2 } from "select2";
+// import $ from "jquery";
+// import "select2";
 
-const this_select = $(".select-basic");
-console.log(this_select);
+// const this_select = $(".select-basic");
+// console.log(this_select);
 
-if (this_select.length > 0) {
-    $(document).ready(function () {
-        $(".select-basic").select2({
-            width: "100%",
-        });
-    });
-}
+// if (this_select.length > 0) {
+//     $(document).ready(function () {
+//         $(".select-basic").select2({
+//             dropdownParent: $(".modal"),
+//             width: "100%",
+//             theme: "bootstrap-5",
+//         });
+//     });
+// }

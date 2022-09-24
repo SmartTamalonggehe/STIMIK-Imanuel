@@ -34,6 +34,12 @@ div.dataTables_paginate.paging_simple_numbers a.current {
     border-radius: 5px;
 }
 
+span.select2.select2-container {
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 5px;
+    padding-top: 5px;
+}
+
 body.lb-disable-scrolling {
   overflow: hidden;
 }
