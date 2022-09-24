@@ -2416,6 +2416,7 @@ if (toogle_password) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getChart": () => (/* binding */ getChart),
 /* harmony export */   "getDataRuangan": () => (/* binding */ getDataRuangan)
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
@@ -2426,6 +2427,17 @@ var getDataRuangan = function getDataRuangan() {
   return axios__WEBPACK_IMPORTED_MODULE_0___default()({
     method: "GET",
     url: "/api/ruangan"
+  }).then(function (res) {
+    return res.data;
+  })["catch"](function (err) {
+    alert("Terjadi kesalahan pada server ".concat(err));
+  });
+};
+
+var getChart = function getChart() {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default()({
+    method: "GET",
+    url: "/api/chart"
   }).then(function (res) {
     return res.data;
   })["catch"](function (err) {

@@ -1,4 +1,4 @@
-@extends('admin.layouts.default')
+@extends('kepala.layouts.default')
 
 @section('halaman', 'Home')
 
@@ -7,7 +7,7 @@
         <!-- Kick start -->
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">Selamat datang admin</h4>
+                <h4 class="card-title">Selamat datang kepala biro umum</h4>
             </div>
             <div class="card-body">
                 <div id="chart"></div>

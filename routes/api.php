@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\AsetAPI;
 use App\Http\Controllers\API\RuanganAPI;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('ruangan', [RuanganAPI::class, 'index'])->name('api.ruangan');
+
+Route::get('chart', [AsetAPI::class, 'chart'])->name('api.chart');

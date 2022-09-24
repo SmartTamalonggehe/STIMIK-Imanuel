@@ -23,7 +23,7 @@ class AsetDiamFactory extends Factory
             'nama' => $this->faker->company(),
             'merk' => $this->faker->jobTitle(),
             'jmlh' => $this->faker->randomNumber(2, false),
-            'satuan' => $this->faker->randomElement(['unit', 'pcs']),
+            'satuan' => $this->faker->randomElement(['Unit', 'Pcs', 'Set']),
             'ket' => $this->faker->realText($maxNbChars = 200, $indexSize = 2),
         ];
     }

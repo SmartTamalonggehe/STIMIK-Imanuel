@@ -1,1 +1,1 @@
-import "./components/chart/chart-year";
+import "./components/chart/chart-barang";
