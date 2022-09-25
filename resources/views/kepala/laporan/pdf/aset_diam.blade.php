@@ -145,30 +145,43 @@
     </header>
     {{-- isi laporan --}}
     <div class="table-responsive mt-3">
-        <table class="table table-borderless">
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Nama</th>
-                    <th>Tipe</th>
-                    <th>Merk</th>
-                    <th>Jumlah</th>
-                    <th>Ket</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($data as $item)
+        @foreach ($data->keyBy('ruangan_id') as $ruang)
+            <h2 style="margin-bottom: 10px; margin-left: 10px">{{ $ruang->ruangan->nama }}</h2>
+            <table style="margin-bottom: 20px;" class="table table-borderless">
+                <thead>
                     <tr>
-                        <td>{{ $loop->iteration }}</td>
-                        <td>{{ $item->nama }}</td>
-                        <td>{{ $item->type }}</td>
-                        <td>{{ $item->merk }}</td>
-                        <td>{{ $item->jmlh }}</td>
-                        <td>{{ $item->ket }}</td>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Merk</th>
+                        <th>Jumlah</th>
+                        <th>Satuan</th>
+                        <th>Ket</th>
                     </tr>
-                @endforeach
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @php
+                        $no = 0;
+                    @endphp
+
+                    @foreach ($data as $item)
+                        @if ($item->ruangan_id == $ruang->ruangan_id)
+                            @php
+                                $no++;
+                            @endphp
+                            <tr>
+                                <td>{{ $no }}</td>
+                                <td>{{ $item->nama }}</td>
+                                <td>{{ $item->merk }}</td>
+                                <td>{{ $item->satuan }}</td>
+                                <td>{{ $item->jmlh }}</td>
+                                <td>{{ $item->ket }}</td>
+                            </tr>
+                        @endif
+                    @endforeach
+                </tbody>
+            </table>
+        @endforeach
+
     </div>
 </body>
 

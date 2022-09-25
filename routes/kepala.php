@@ -10,3 +10,6 @@ Route::get('/', function () {
 Route::get('aset-bergerak', function () {
     return view('kepala.aset_bergerak.index');
 })->name('kepala.aset-bergerak');
+Route::get('aset-diam', function () {
+    return view('kepala.aset_diam.index');
+})->name('kepala.aset-diam');

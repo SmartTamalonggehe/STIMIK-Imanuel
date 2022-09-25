@@ -31,7 +31,7 @@
                         data-feather="codesandbox"></i><span class="menu-title text-truncate">Aset Bergerak</span></a>
             </li>
             <li class="nav-item">
-                <a class="d-flex align-items-center" href="{{ route('admin.ruangan') }}"><i
+                <a class="d-flex align-items-center" href="{{ route('kepala.aset-diam') }}"><i
                         data-feather="codesandbox"></i><span class="menu-title text-truncate">Aset Tidak
                         Bergerak</span></a>
             </li>
