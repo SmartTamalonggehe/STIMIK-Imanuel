@@ -22,47 +22,20 @@
     <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
             <li class="nav-item">
-                <a class="d-flex align-items-center" href="{{ route('admin') }}"><i data-feather="home"></i><span
+                <a class="d-flex align-items-center" href="{{ route('kepala') }}"><i data-feather="home"></i><span
                         class="menu-title text-truncate">Dashboard</span></a>
             </li>
 
             <li class="nav-item">
+                <a class="d-flex align-items-center" href="{{ route('kepala.aset-bergerak') }}"><i
+                        data-feather="codesandbox"></i><span class="menu-title text-truncate">Aset Bergerak</span></a>
+            </li>
+            <li class="nav-item">
                 <a class="d-flex align-items-center" href="{{ route('admin.ruangan') }}"><i
-                        data-feather="codesandbox"></i><span class="menu-title text-truncate">Ruangan</span></a>
+                        data-feather="codesandbox"></i><span class="menu-title text-truncate">Aset Tidak
+                        Bergerak</span></a>
             </li>
 
-            <li class=" nav-item">
-                <a class="d-flex align-items-center" href="#"><i data-feather="corner-down-right"></i><span
-                        class="menu-title text-truncate">Barang Masuk</span></a>
-                <ul class="menu-content">
-                    <li>
-                        <a class="d-flex align-items-center" href="{{ route('admin.masuk.aset.bergerak') }}"><i
-                                data-feather="circle"></i><span class="menu-item text-truncate">Aset Bergerak</span></a>
-                    </li>
-                    <li>
-                        <a class="d-flex align-items-center" href="{{ route('admin.masuk.aset.diam') }}"><i
-                                data-feather="circle"></i><span class="menu-item text-truncate">Aset Tidak
-                                Bergerak</span></a>
-                    </li>
-                </ul>
-            </li>
-
-            <li class=" nav-item">
-                <a class="d-flex align-items-center" href="#"><i data-feather="corner-down-left"></i><span
-                        class="menu-title text-truncate">Barang Keluar</span></a>
-                <ul class="menu-content">
-                    <li>
-                        <a class="d-flex align-items-center" href="{{ route('admin.keluar.aset.bergerak') }}"><i
-                                data-feather="circle"></i><span class="menu-item text-truncate">Aset
-                                Bergerak</span></a>
-                    </li>
-                    <li>
-                        <a class="d-flex align-items-center" href="{{ route('admin.keluar.aset.diam') }}"><i
-                                data-feather="circle"></i><span class="menu-item text-truncate">Aset Tidak
-                                Bergerak</span></a>
-                    </li>
-                </ul>
-            </li>
         </ul>
     </div>
 </div>

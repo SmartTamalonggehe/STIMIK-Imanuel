@@ -16,6 +16,7 @@ class CreateAssetBergerakTable extends Migration
         Schema::create('asset_bergerak', function (Blueprint $table) {
             $table->id();
             $table->foreignId('jenis_id')->constrained('jenis')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->string('jenis_barang'); // Roda 4 roda 2 lainnya
             $table->string('nama');
             $table->string('type');
             $table->string('merk');

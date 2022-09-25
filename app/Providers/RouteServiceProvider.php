@@ -58,9 +58,14 @@ class RouteServiceProvider extends ServiceProvider
                 ->group(base_path('routes/crud.php'));
 
             Route::middleware('web')
-                ->prefix('pimpinan')
+                ->prefix('kepala')
                 ->namespace($this->namespace)
-                ->group(base_path('routes/pimpinan.php'));
+                ->group(base_path('routes/kepala.php'));
+
+            Route::middleware('web')
+                ->prefix('laporan')
+                ->namespace($this->namespace)
+                ->group(base_path('routes/laporan.php'));
         });
     }
 
