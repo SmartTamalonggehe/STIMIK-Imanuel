@@ -32,7 +32,7 @@ Route::prefix('keluar')->group(function () {
 
     Route::get('aset-tidak-bergerak', function () {
         return view('admin.aset_diam.index', [
-            'jenis' => 1
+            'jenis' => 2
         ]);
     })->name('admin.keluar.aset.diam');
 });
