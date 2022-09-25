@@ -12,28 +12,45 @@
                  <input type="hidden" name="jenis_id" id="jenis_id" value="{{ $jenis }}">
                  <div class="modal-body">
                      <div class="row">
-                         <div class="col-12">
-                             <label for="nama">Nama Barang</label>
+                         <div class="col-12 col-lg-4">
+                             <label for="jenis_barang">Jenis Barang</label>
                              <div class="mb-1">
-                                 <input class="form-control inputReset" type="text" id="nama" name="nama">
+                                 <select class="form-select" name="jenis_barang" id="jenis_barang" required>
+                                     <option value="">Pilih Jenis</option>
+                                     <option value="Kendaraan Roda 2">Kendaraan Roda 2</option>
+                                     <option value="Kendaraan Roda 4">Kendaraan Roda 4</option>
+                                     <option value="Lainnya">Lainnya</option>
+                                 </select>
                              </div>
                          </div>
+
+                         <div class="col-12 col-lg-8">
+                             <label for="nama">Nama Barang</label>
+                             <div class="mb-1">
+                                 <input class="form-control inputReset" type="text" id="nama" name="nama"
+                                     required>
+                             </div>
+                         </div>
+
                          <div class="col-12 col-lg-6">
                              <label for="type">Tipe Barang</label>
                              <div class="mb-1">
-                                 <input class="form-control inputReset" type="text" id="type" name="type">
+                                 <input class="form-control inputReset" type="text" id="type" name="type"
+                                     required>
                              </div>
                          </div>
                          <div class="col-12 col-lg-6">
                              <label for="ket">Merk Barang</label>
                              <div class="mb-1">
-                                 <input class="form-control inputReset" type="text" id="merk" name="merk">
+                                 <input class="form-control inputReset" type="text" id="merk" name="merk"
+                                     required>
                              </div>
                          </div>
                          <div class="col-12 col-lg-2">
                              <label for="jmlh">Jumlah</label>
                              <div class="mb-1">
-                                 <input class="form-control inputReset" type="number" id="jmlh" name="jmlh">
+                                 <input class="form-control inputReset" type="number" id="jmlh" name="jmlh"
+                                     required>
                              </div>
                          </div>
                          <div class="col-12 col-lg-10">

@@ -25,6 +25,7 @@ $folder = 'aset_bergerak';
                         <thead class="table-light">
                             <tr>
                                 <th>No</th>
+                                <th>Jenis</th>
                                 <th>Nama</th>
                                 <th>Tipe</th>
                                 <th>Merk</th>
@@ -61,6 +62,9 @@ $folder = 'aset_bergerak';
                         data: 'DT_RowIndex',
                         orderable: false,
                         searchable: false
+                    },
+                    {
+                        data: 'jenis_barang',
                     },
                     {
                         data: 'nama',

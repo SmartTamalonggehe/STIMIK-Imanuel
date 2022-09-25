@@ -1,6 +1,6 @@
 @extends('kepala.layouts.default')
 
-@section('halaman', 'Home')
+@section('halaman', 'Aset Tidak Bergerak')
 
 @section('content')
     <div class="content-body">

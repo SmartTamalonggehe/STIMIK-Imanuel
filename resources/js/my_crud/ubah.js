@@ -32,6 +32,7 @@ const formData = (data) => {
     if (route == "aset_bergerak") {
         document.getElementById("id_form").value = data.id;
         document.getElementById("nama").value = data.nama;
+        document.getElementById("jenis_barang").value = data.jenis_barang;
         document.getElementById("jenis_id").value = data.jenis_id;
         document.getElementById("type").value = data.type;
         document.getElementById("merk").value = data.merk;

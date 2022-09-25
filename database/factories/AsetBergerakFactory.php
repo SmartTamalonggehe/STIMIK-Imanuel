@@ -17,6 +17,7 @@ class AsetBergerakFactory extends Factory
         $jenis_id = Jenis::all()->random()->id;
         return [
             'jenis_id' => $jenis_id,
+            'jenis_barang' => $this->faker->randomElement(['Roda 2', 'Roda 4', 'Lainnya']),
             'nama' => $this->faker->company(),
             'type' => $this->faker->jobTitle(),
             'merk' => $this->faker->bs(),
