@@ -25,7 +25,8 @@
                      </span>
                  </a>
                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-user">
-                     <a class="dropdown-item" href="#"><i class="me-50" data-feather="power"></i>
+                     <a id="btn-logout" class="dropdown-item">
+                         <i class="me-50" data-feather="power"></i>
                          Logout
                      </a>
                  </div>
