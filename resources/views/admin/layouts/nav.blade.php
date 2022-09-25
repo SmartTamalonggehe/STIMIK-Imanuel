@@ -20,8 +20,8 @@
                          <span class="user-name fw-bolder">Admin</span>
                      </div>
                      <span class="avatar">
-                         <img class="round" src="{{ asset('app-assets/images/portrait/small/avatar-s-1.jpg') }}"
-                             alt="avatar" height="40" width="40">
+                         <img class="round" src="{{ asset('app-assets/images/portrait/auth.png') }}" alt="avatar"
+                             height="40" width="40">
                      </span>
                  </a>
                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-user">

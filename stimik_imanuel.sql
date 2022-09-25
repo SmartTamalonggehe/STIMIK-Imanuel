@@ -25,6 +25,7 @@ DROP TABLE IF EXISTS `asset_bergerak`;
 CREATE TABLE `asset_bergerak` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `jenis_id` bigint unsigned NOT NULL,
+  `jenis_barang` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nama` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `merk` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -133,7 +134,7 @@ CREATE TABLE `jenis` (
 
 LOCK TABLES `jenis` WRITE;
 /*!40000 ALTER TABLE `jenis` DISABLE KEYS */;
-INSERT INTO `jenis` VALUES (1,'Barang Masuk','2022-09-24 06:47:29','2022-09-24 06:47:29'),(2,'Barang Keluar','2022-09-24 06:47:29','2022-09-24 06:47:29');
+INSERT INTO `jenis` VALUES (1,'Barang Masuk','2022-09-24 23:35:56','2022-09-24 23:35:56'),(2,'Barang Keluar','2022-09-24 23:35:56','2022-09-24 23:35:56');
 /*!40000 ALTER TABLE `jenis` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -348,7 +349,7 @@ CREATE TABLE `roles` (
 
 LOCK TABLES `roles` WRITE;
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
-INSERT INTO `roles` VALUES (1,'ADMIN','web','2022-09-24 06:47:29','2022-09-24 06:47:29'),(2,'KEPALA','web','2022-09-24 06:47:29','2022-09-24 06:47:29');
+INSERT INTO `roles` VALUES (1,'ADMIN','web','2022-09-24 23:35:56','2022-09-24 23:35:56'),(2,'KEPALA','web','2022-09-24 23:35:56','2022-09-24 23:35:56');
 /*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -404,7 +405,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'admin','admin@mail.com',NULL,'$2y$10$XPLfX97f6BaHGf2Ibq5t/.qWvmFg/BSZM37pIhIaxgbmr1muWLC7m',NULL,'2022-09-24 06:47:29','2022-09-24 06:47:29'),(2,'kepala','kepala@mail.com',NULL,'$2y$10$HJZUQgts43Tjde17BzR9TuywsMMVnCisyWIO8WqIkTjJT0W1PTjaG',NULL,'2022-09-24 06:47:29','2022-09-24 06:47:29');
+INSERT INTO `users` VALUES (1,'admin','admin@mail.com',NULL,'$2y$10$VTMq45bTh.Ses9LIkBPl7OmGujdJJwvQ9dF1YHsUsxGfC7Ne0Ev9.',NULL,'2022-09-24 23:35:56','2022-09-24 23:35:56'),(2,'kepala','kepala@mail.com',NULL,'$2y$10$Djc4ffHj3s8KUgpCvFeFleSE8g0DmJNOtgtwGGbD1FKmK0wfPVSA.',NULL,'2022-09-24 23:35:56','2022-09-24 23:35:56');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -417,4 +418,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-25  0:56:43
+-- Dump completed on 2022-09-25 17:37:59
