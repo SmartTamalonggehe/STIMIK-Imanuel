@@ -138,7 +138,7 @@
         <div class="text-center">
             <h3>PEMERINTAH PROVINSI PAPUA</h3>
             <h2 class="mt-1">SEKRETARIAT DAERAH</h2>
-            <h3 class="uppercase">Laporan {{ $jenis ? $jenis->nama : '' }} Aset Bergerak</h3>
+            <h3 class="uppercase">Laporan {{ $jenis ? $jenis->nama : '' }} Aset Tidak Bergerak</h3>
         </div>
         <hr class="garis_surat mt-2">
         <hr>
